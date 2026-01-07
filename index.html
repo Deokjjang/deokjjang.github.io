@@ -1,46 +1,149 @@
 <!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DVEM</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:960px;margin:48px auto;padding:0 16px;line-height:1.6}
-    header{margin-bottom:40px}
-    h1{margin:0 0 8px}
-    .tag{color:#666}
-    section{margin:32px 0}
-    footer{margin-top:48px;padding-top:16px;border-top:1px solid #eee;color:#666;font-size:14px}
-    a{color:inherit}
-  </style>
-</head>
-<body>
-  <header>
-    <h1>DVEM</h1>
-    <div class="tag">Secure, minimal, subscription-based messenger</div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DVEM</title>
+    <meta name="description" content="DVEM — Secure, minimal, subscription-based messenger." />
+    <style>
+      :root { color-scheme: light; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        color: #111;
+        background: #fff;
+      }
+      header, main, footer { max-width: 920px; margin: 0 auto; padding: 24px; }
+      header { padding-top: 40px; padding-bottom: 10px; }
+      h1 { margin: 0 0 8px; font-size: 40px; letter-spacing: -0.5px; }
+      .sub { margin: 0 0 20px; color: #444; }
+      nav a { color: #111; text-decoration: none; margin-right: 14px; }
+      nav a:hover { text-decoration: underline; }
+      .card {
+        border: 1px solid #e5e5e5;
+        border-radius: 14px;
+        padding: 18px;
+        margin: 14px 0;
+      }
+      h2 { margin-top: 34px; margin-bottom: 10px; font-size: 22px; }
+      ul { margin: 10px 0 0 18px; }
+      .price-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .price {
+        border: 1px solid #e5e5e5;
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .price h3 { margin: 0 0 6px; font-size: 18px; }
+      .muted { color: #555; font-size: 14px; }
+      footer {
+        border-top: 1px solid #eee;
+        margin-top: 28px;
+        padding-top: 18px;
+        padding-bottom: 40px;
+        color: #444;
+        font-size: 14px;
+      }
+      footer a { color: #111; text-decoration: none; }
+      footer a:hover { text-decoration: underline; }
+      .pill {
+        display: inline-block;
+        padding: 4px 10px;
+        border: 1px solid #e5e5e5;
+        border-radius: 999px;
+        font-size: 12px;
+        color: #444;
+        margin-right: 8px;
+      }
+      code { background: #f6f6f6; padding: 2px 6px; border-radius: 6px; }
+    </style>
+  </head>
 
-  <section>
-    <h2>서비스 개요</h2>
-    <p>
-      DVEM은 보안과 생산성을 중심으로 설계된 구독형 메신저 서비스입니다.
-      광고 및 데이터 판매 없이 운영되며, 유료 구독을 통해 기능이 제공됩니다.
-    </p>
-  </section>
+  <body>
+    <header>
+      <h1>DVEM</h1>
+      <p class="sub">Secure, minimal, subscription-based messenger</p>
 
-  <section>
-    <h2>요금제</h2>
-    <ul>
-      <li>Personal</li>
-      <li>Pro</li>
-      <li>Advanced</li>
-    </ul>
-  </section>
+      <nav>
+        <a href="#overview">서비스 개요</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  <footer>
-    <a href="/terms.html">Terms</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/refund.html">Refund</a>
-  </footer>
-</body>
+      <div style="margin-top:12px;">
+        <span class="pill">No ads</span>
+        <span class="pill">No data selling</span>
+        <span class="pill">Subscription only</span>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview" class="card">
+        <h2>서비스 개요</h2>
+        <p>
+          DVEM은 보안과 생산성을 중심으로 설계된 구독형 메신저 서비스입니다.
+          광고 및 데이터 판매 없이 운영되며, 유료 구독을 통해 기능이 제공됩니다.
+        </p>
+        <ul>
+          <li>보안 중심 설계 (E2EE 지향)</li>
+          <li>미니멀 UX</li>
+          <li>프로페셔널 협업/업무용 기능 확장</li>
+        </ul>
+      </section>
+
+      <section id="pricing" class="card">
+        <h2>Pricing</h2>
+        <p class="muted">
+          아래 가격은 서비스 정책/국가/세금 설정에 따라 변경될 수 있습니다.
+        </p>
+
+        <div class="price-grid">
+          <div class="price">
+            <h3>Personal</h3>
+            <div><strong>₩9,900</strong> / month</div>
+            <div class="muted">개인용</div>
+          </div>
+
+          <div class="price">
+            <h3>Pro</h3>
+            <div><strong>₩25,000</strong> / seat / month</div>
+            <div class="muted">팀/업무용</div>
+          </div>
+
+          <div class="price">
+            <h3>Advanced</h3>
+            <div><strong>₩100,000</strong> / seat / month</div>
+            <div class="muted">엔터프라이즈/고급</div>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:14px;">
+          링크 테스트: <code>https://deokjjang.github.io/#pricing</code>
+        </p>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>
+          문의: <a href="mailto:officialdjjdev@gmail.com">officialdjjdev@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div style="margin-bottom:10px;">
+        <strong>DVEM</strong> — officialdjjdev@gmail.com
+      </div>
+      <div>
+        <a href="/terms.html">Terms</a> |
+        <a href="/privacy.html">Privacy</a> |
+        <a href="/refund.html">Refund</a>
+      </div>
+    </footer>
+  </body>
 </html>
